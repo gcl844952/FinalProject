@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121">
+
+
+    <org.eazegraph.lib.charts.PieChart
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/piechart"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:egEmptyDataText="true"
+        app:egLegendHeight="0dp"
+        app:egUsePieRotation="true"
+        app:egValueTextSize="0dp"
+        app:layout_constraintVertical_bias="0.1"
+        app:egInnerPaddingColor="#212121"/>
+
+    <TextView
+        android:id="@+id/tv_steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/piechart"
+        app:layout_constraintBottom_toBottomOf="@id/piechart"
+        app:layout_constraintStart_toStartOf="@id/piechart"
+        app:layout_constraintEnd_toEndOf="@id/piechart"
+        android:text="0"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="#f5a816"
+        android:textAlignment="center" />
+
+
+
+    <Button
+        android:id="@+id/btnplaypause"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_play_arrow_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/txtstepgoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/piechart"
+        app:layout_constraintBottom_toBottomOf="@id/piechart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        android:text="7500步"
+        android:textSize="10sp"
+        android:textColor="#f5a816"
+        android:textAlignment="center"
+        android:background="@drawable/background_goal"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:background="@drawable/shadow_border"
+        app:layout_constraintTop_toBottomOf="@id/piechart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <!--速度-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="速度"
+            android:textSize="13sp"
+            android:textColor="#f5a816"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtspeed"
+            app:layout_constraintEnd_toEndOf="@+id/txtspeed"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/txtspeed"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:srcCompat="@drawable/speed" />
+
+        <TextView
+            android:id="@+id/txtspeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textSize="10sp"
+            android:textColor="#f5a816"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/txtcalburned"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <!--卡路里-->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="消耗"
+            android:textSize="13sp"
+            android:textColor="#f5a816"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtcalburned"
+            app:layout_constraintEnd_toEndOf="@+id/txtcalburned"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/txtcalburned"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:srcCompat="@drawable/calory" />
+
+        <TextView
+            android:id="@+id/txtcalburned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textSize="10sp"
+            android:textColor="#f5a816"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@id/txtspeed"
+            app:layout_constraintEnd_toStartOf="@id/timer"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/txtspeed"
+            app:layout_constraintTop_toTopOf="@id/txtspeed" />
+
+        <!--时间-->
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="时间"
+            android:textSize="13sp"
+            android:textColor="#f5a816"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/imageView8"
+            app:layout_constraintEnd_toEndOf="@id/imageView8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/imageView8"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/timer"
+            app:layout_constraintEnd_toEndOf="@id/timer"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/timer"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:srcCompat="@drawable/timer" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textColor="#f5a816"
+            app:layout_constraintTop_toTopOf="@id/txtcalburned"
+            app:layout_constraintBottom_toBottomOf="@id/txtcalburned"
+            app:layout_constraintEnd_toStartOf="@id/txtdistance"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/txtcalburned" />
+
+        <!--距离-->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="距离"
+            android:textSize="13sp"
+            android:textColor="#f5a816"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="@id/imageView3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/imageView3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtdistance"
+            app:layout_constraintEnd_toEndOf="@id/txtdistance"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/txtdistance"
+            app:layout_constraintTop_toBottomOf="@+id/textView1"
+            app:srcCompat="@drawable/distance" />
+
+        <TextView
+            android:id="@+id/txtdistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textColor="#f5a816"
+            app:layout_constraintBottom_toBottomOf="@id/timer"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayout2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/timer"
+            app:layout_constraintTop_toTopOf="@id/timer" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

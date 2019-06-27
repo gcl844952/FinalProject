@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="317dp"
+            android:layout_height="114dp"
+            android:background="@drawable/round_rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.38"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtdatel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#f5a816"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.065"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.322" />
+
+            <TextView
+                android:id="@+id/txtstep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#f5a816"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.065"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.822" />
+
+            <ImageView
+                android:id="@+id/imgcbl"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/imgditancel"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:srcCompat="@drawable/calory" />
+
+            <ImageView
+                android:id="@+id/imgditancel"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgcbl"
+                app:layout_constraintBottom_toTopOf="@id/imgspeedl"
+                app:srcCompat="@drawable/distance" />
+
+            <ImageView
+                android:id="@+id/imgspeedl"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgditancel"
+                app:layout_constraintBottom_toTopOf="@id/imgtimel"
+                app:srcCompat="@drawable/speed" />
+
+            <ImageView
+                android:id="@+id/imgtimel"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgspeedl"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/timer" />
+
+            <TextView
+                android:id="@+id/tvcalburnedl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TextView"
+                android:textSize="12sp"
+                android:textColor="#f5a816"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgcbl"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvdistancel"
+                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintHorizontal_bias="0.05"/>
+
+            <TextView
+                android:id="@+id/tvdistancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="12sp"
+                android:textColor="#f5a816"
+                app:layout_constraintBottom_toTopOf="@id/tvspeedl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgditancel"
+                app:layout_constraintTop_toBottomOf="@id/tvcalburnedl"
+                app:layout_constraintHorizontal_bias="0.05" />
+
+            <TextView
+                android:id="@+id/tvspeedl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#f5a816"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@id/tvttimel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgspeedl"
+                app:layout_constraintTop_toBottomOf="@id/tvdistancel"
+                app:layout_constraintHorizontal_bias="0.05" />
+
+            <TextView
+                android:id="@+id/tvttimel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#f5a816"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgtimel"
+                app:layout_constraintTop_toBottomOf="@+id/tvspeedl"
+                app:layout_constraintHorizontal_bias="0.05" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
